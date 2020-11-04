@@ -1,0 +1,54 @@
+/* Begin Header related CSS */
+
+#header {
+    height: 8vh
+}
+
+#headerButton {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0px 0px 0px 0px
+}
+
+.navbar-expand .navbar-nav .nav-link {
+    padding: 0px 0px 0px 0px
+}
+
+#logo {
+    font-style: italic;
+}
+/* End Header related CSS */
+
+
+/* Begin App Related CSS */
+.postAuthor {
+    font-size: large;
+}
+
+.mainContainer {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    margin: 0px 0px 0px 0px;
+}
+
+.buttStyle {
+    margin-right: 1%;
+}
+
+/* End App Related CSS */
+
+
+/* Begin Footer related CSS */
+
+.footer-text {
+    max-height: 7%;
+}
+
+@media (max-width: 800px) {
+    .footer-text {
+        max-height: 8%;
+    }
+}
+
+/* End Footer related CSS */

@@ -1,0 +1,27 @@
+version: '3.0'
+services:
+  db:
+    container_name: pg_blogger
+    image: postgres:latest
+    environment:
+        - POSTGRES_USER=${POSTGRES_USER}
+        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+        - POSTGRES_DB=${POSTGRES_DB}
+        - POSTGRES_HOST=${POSTGRES_HOST}
+        - POSTGRES_PORT=${POSTGRES_PORT}
+    ports:
+      - 5432:5432
+    volumes:
+      - db_volume:/var/lib/postgresql
+
+  api:
+    restart: always
+    container_name: backend_blogger
+    build: .
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+
+volumes:
+  db_volume:
