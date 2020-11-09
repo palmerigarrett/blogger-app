@@ -61,7 +61,7 @@ function Header() {
             className="btn bg-transparent"
             id="logo"
             >
-              <Navbar.Brand href="/blog">blog.io</Navbar.Brand>
+              <Navbar.Brand href="/blog">blogMe</Navbar.Brand>
             </Button>
           <Nav className="mr-auto">
           </Nav>

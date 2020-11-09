@@ -108,7 +108,7 @@ function Login() {
                 </Modal.Footer>
             </Modal>
             <Jumbotron>
-                <h2>Login to Blogger!</h2>
+                <h2>Login!</h2>
                 <p>
                 Login to start bloggin'!
                 </p>

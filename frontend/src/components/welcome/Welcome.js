@@ -39,7 +39,7 @@ function Welcome() {
         </Modal.Body>
       </Modal>
       <Jumbotron style={{ marginBottom: "0" }}>
-        <h1>Welcome to blog.io!</h1>
+        <h1>Welcome to blogMe!</h1>
         <p>
           Login or click below to start reading. Enjoy!
         </p>
