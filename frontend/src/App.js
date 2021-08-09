@@ -19,7 +19,7 @@ export const AppContext = createContext();
 const reducer = (state, action) => {
   switch (action.type) {
     case "LOGIN":
-      // console.log("payload:", action.payload)
+      console.log("payload:", action.payload)
       return {
         ...state,
         isLoggedIn: true,
@@ -44,6 +44,7 @@ function App() {
   // console.log(cookies)
   
   const cookieToken = cookies.split("user=").pop()
+  console.log(cookieToken)
   
   const initialState = {
     isLoggedIn: cookies ? true : false,

@@ -61,6 +61,7 @@ function BlogCreate(props) {
     }
 
     function toggleForm() {
+        // FIXME: Use a damn ternary
         if (isCreatingPost) {
             setIsCreatingPost(false)
         } else {
@@ -80,14 +81,16 @@ function BlogCreate(props) {
         if (data.error) {
           setError(data.errorMessage)
         } else {
+            // Should return a success message/modal. If alreadt being accomplished elsewhere,
+            // no "else" block should be used.
           console.log(data.res)
         }
       }
 
-
-    useEffect (() => {
-        // window.location.reload(false);
-    },[isCreatingPost])
+    // ????
+    // useEffect (() => {
+    //     // window.location.reload(false);
+    // },[isCreatingPost])
 
     return (
         <div className="BlogCreate">
@@ -109,6 +112,8 @@ function BlogCreate(props) {
                     <Button variant="success" type="submit" > Create Post </Button>
                 </Form>
                 :
+                // FIXME: onClick can use callback to set state if no other action is being made ie below
+                // "onClick={() => setisCreatingPost(!isCreatingPost);}"
                 <Button align="center" variant="primary" onClick={toggleForm}>Create a Blog Post!</Button>
             }
         </div>

@@ -18,19 +18,12 @@ function Home() {
   async function getHomeBlogposts() {
     const route = 'home/blogposts'
     const data = await doAuthFetch({url:route, token: token, type:'GET'})
-
-    
-    
-
     if (data.error) {
       setError(data.errorMessage)
     } else {
       setBlogposts(data.res.blogposts)
     }
   }
-  useEffect(() => {
-    console.log('state: ', state)
-  })
 
   useEffect(() => {
     getHomeBlogposts()
@@ -47,11 +40,13 @@ function Home() {
     if (data.error) {
       setError(data.errorMessage)
     } else {
+      // FIXME: dumb
       getHomeBlogposts()
     }
   }
-
+  
   async function deletePost(id) {
+    // why not just inject the id directly?
     const bpDeleteID = id
     const route = `/blog/${bpDeleteID}`
     
@@ -60,13 +55,13 @@ function Home() {
     if (data.error) {
       setError(data.errorMessage)
     } else {
+      // FIXME: dumb
       getHomeBlogposts()
     }
   }
 
   return (
     <>
-    
       <Jumbotron>
         <h1 style={{ marginBottom: '25px' }} >Home Page</h1>
         {/* <BlogCreate onCreate={createPost} /> */}

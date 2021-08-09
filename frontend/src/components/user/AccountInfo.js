@@ -21,6 +21,7 @@ function AccountInfo() {
     const { state } = useContext(AppContext)
     const { token } = state
     let history = useHistory()
+    // fixme: set an initial state to avoid all of this nonsense
     const [profileState, setProfileState] = useState({
         first_name: '',
         last_name: '',
@@ -65,7 +66,7 @@ function AccountInfo() {
 
     async function fetchAccountInfo() {
         const route = '/account'
-
+        console.log(token)
         const data = await doAuthFetch({ url: route, token: token, type: 'GET' })
         console.log("data", data)
         if (data.error) {

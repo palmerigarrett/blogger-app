@@ -9,6 +9,7 @@ function Blog() {
   const [blogpost, setBlogpost] = useState({});
 
   useEffect(() => {
+    // fixme: if I see another promise not using async await I will commit seppuku
     fetch(`/blogpost/${id}`).then(res => res.json()).then(data => {
       console.log('blogpost data: ', data)
       setBlogpost(data);
